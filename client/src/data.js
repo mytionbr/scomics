@@ -9,6 +9,7 @@ const data ={
             brand:'DC comics',
             rating: 4.5,
             numReviews:10,
+            countInStock:4,
             description:'A dc decidiu inventar mais um restart sem sentido, pelo menos tem o batman'
         },
         {
@@ -20,6 +21,7 @@ const data ={
             brand:'DC comics',
             rating: 4.5,
             numReviews:10,
+            countInStock:0,
             description:'A dc decidiu inventar mais um restart sem sentido, pelo menos tem o batman'
         },
         {
@@ -31,6 +33,7 @@ const data ={
             brand:'DC comics',
             rating: 4.5,
             numReviews:10,
+            countInStock:20,
             description:'A dc decidiu inventar mais um restart sem sentido, pelo menos tem o batman'
         },
         {
@@ -42,6 +45,7 @@ const data ={
             brand:'DC comics',
             rating: 4.5,
             numReviews:10,
+            countInStock:49,
             description:'A dc decidiu inventar mais um restart sem sentido, pelo menos tem o batman'
         },
         {
@@ -53,6 +57,7 @@ const data ={
             brand:'DC comics',
             rating: 4.5,
             numReviews:10,
+            countInStock:1,
             description:'A dc decidiu inventar mais um restart sem sentido, pelo menos tem o batman'
         },
     ]
