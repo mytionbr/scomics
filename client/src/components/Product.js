@@ -12,7 +12,7 @@ export default function Product({product,id}) {
           />
         </a>
         <div className="card-body">
-          <a href={`product/id/${product._id}`}>
+          <a href={`product/${product._id}`}>
             <h2>{product.name}</h2>
           </a>
           <Rating rating={product.rating} numReviews={product.numReviews} />
