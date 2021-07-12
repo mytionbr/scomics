@@ -145,6 +145,9 @@ button.block{
   flex: 1 1 50rem;
 }
 
+.min-30{
+  min-width: 30rem;
+}
 
 
 /*header*/
@@ -175,6 +178,11 @@ span.badge {
 
 img{
   border-radius: 0.5rem;
+}
+
+img.small {
+  max-width: 5rem;
+  width: 100%;
 }
 
 img.medium{
