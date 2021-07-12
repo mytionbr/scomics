@@ -4,6 +4,7 @@ import HomeScreen from "./Screens/HomeScreen";
 import CartScreen from "./Screens/CartScreen";
 import {Link} from 'react-router-dom'
 import { useSelector } from "react-redux";
+import SigninScreen from "./Screens/SigninScreen";
 
 function App() {
   const cart = useSelector((state)=> state.cart)
@@ -24,7 +25,7 @@ function App() {
           </Link >
         </div>
         <div>
-          <Link to="cart.html">
+          <Link to="/cart">
             Carrinho
             {
               cartItems.length > 0 && (
@@ -33,10 +34,11 @@ function App() {
                 </span>
               )
             }</Link >
-          <Link to="signin.html">Entrar</Link >
+          <Link to="/signin">Entrar</Link >
         </div>
       </header>
       <main>
+      <Route path="/signin" component={SigninScreen}></Route>
       <Route path="/cart/:id?" component={CartScreen}></Route>
       <Route path="/product/:id" component={ProductScreen}></Route>
       <Route path="/" component={HomeScreen} exact></Route>
