@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import SigninScreen from "./Screens/SigninScreen";
 import RegisterScreen from "./Screens/RegisterScreen";
 import { signout } from "./actions/userActions";
+import ShippingAddressScreen from "./Screens/ShippingAddressScreen";
 
 function App() {
   const cart = useSelector((state)=> state.cart)
@@ -70,6 +71,7 @@ function App() {
       <Route path="/register" component={RegisterScreen}></Route>
       <Route path="/cart/:id?" component={CartScreen}></Route>
       <Route path="/product/:id" component={ProductScreen}></Route>
+      <Route path="/shipping" component={ShippingAddressScreen} exact></Route>
       <Route path="/" component={HomeScreen} exact></Route>
        
       </main>
