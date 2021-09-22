@@ -32,7 +32,7 @@ body {
 .grid-container{
     display:grid;
     grid-template: 
-        'header' 5rem
+        'header' 6rem
         'main' 1fr
         'footer' 5rem
         / 1fr;
@@ -42,7 +42,7 @@ body {
   
   header{
     grid-area:header;
-    background-color:#97D9E1;
+    background-color:$light-blue-color;
   }
   
   main{
@@ -52,7 +52,7 @@ body {
   
   footer{
     grid-area: footer;
-    background-color: #97D9E1;
+    background-color: $light-blue-color;
     color:#fff;
   }
 

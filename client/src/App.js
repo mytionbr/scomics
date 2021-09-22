@@ -14,6 +14,7 @@ import OrderScreen from "./Screens/OrderScreen";
 import OrderHistoryScreen from "./Screens/OrderHistoryScreen";
 import ProfileScreen from "./Screens/ProfileScreen";
 import PrivateRoute from "./components/PrivateRoute";
+import IconLink from "./components/IconLink";
 
 function App() {
   const cart = useSelector((state)=> state.cart)
@@ -30,31 +31,34 @@ function App() {
    
     <div className="grid-container">
       <header className="row">
-        <div>
-          <Link to="/cart">Menu</Link >
-          <Link to="/signin">Pesquisar</Link >
+        <div className="row">
+          <IconLink href="/cart" iconName="fas fa-bars">Menu</IconLink>
+          <IconLink href="/" iconName="fas fa-search">Buscar</IconLink>
         </div>
         <div>
           <Link className="brand" to="/">
             Scomics
           </Link >
         </div>
-        <div>
-          <Link to="/cart">
-            Carrinho
-            {
-              cartItems.length > 0 && (
-                <span className="badge">
-                  {cartItems.length}
-                </span>
-              )
-            }</Link >
+        <div className="row">
+        <IconLink href="/cart" iconName="fas fa-shopping-cart">
+          Carrinho
+              {
+                cartItems.length > 0 && (
+                  <span className="badge">
+                    {cartItems.length}
+                  </span>
+                )
+              }
+        </IconLink>
+        
             {
               userInfo ? (
                 <div className="dropdown"> 
-                  <Link to="#">{userInfo.name}
-                    <i className="fa fa-caret-down"></i>
-                  </Link>
+                <IconLink href="#" iconName="fas fa-user">
+                {userInfo.name} <i className="fa fa-caret-down"></i>
+                
+                </IconLink>
                   <ul className="dropdown-content">
                   <li>
                       <Link to="/profile">
@@ -76,7 +80,9 @@ function App() {
                 
               ) :
               (
-                <Link to="/signin">Entrar</Link >
+                <IconLink href="/signin" iconName="fas fa-door-open">
+                  Entrar
+                </IconLink>
               )
             }
             {userInfo && userInfo.isAdmin && (
