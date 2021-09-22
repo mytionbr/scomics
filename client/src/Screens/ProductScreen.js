@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { detailsProducts } from "../actions/productsActions";
 import LoadingBox from "../components/LoadingBox";
+import LoadingOverlay from "../components/LoadingOverlay";
 import MessageBox from "../components/MessageBox";
 import Rating from "../components/Rating";
 
@@ -24,7 +25,7 @@ export default function ProductScreen(props) {
   return (
     <div>
       {loading ? (
-        <LoadingBox></LoadingBox>
+        <LoadingOverlay />
       ) : error ? (
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (

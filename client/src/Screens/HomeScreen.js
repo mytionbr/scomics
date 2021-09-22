@@ -4,6 +4,7 @@ import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
 import { useDispatch, useSelector } from "react-redux";
 import { listProducts } from "../actions/productsActions";
+import LoadingOverlay from "../components/LoadingOverlay";
 
 export default function HomeScreen() {
   const dispatch = useDispatch()
@@ -17,11 +18,13 @@ export default function HomeScreen() {
   return (
     <div>
         {loading ? (
-            <LoadingBox></LoadingBox>
+            <LoadingOverlay />
         ) : error ?(
             <MessageBox variant="danger">{error}</MessageBox>
         ) : (      
         <div>
+        
+
             <div className="row center">
             {products.map((product) => (
                 <Product product={product} id={product._id} />
