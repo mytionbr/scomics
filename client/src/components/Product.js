@@ -12,7 +12,6 @@ export default function Product({ product, id }) {
 
         <div className="card-body">
           <h2 className="card-title">{product.name}</h2>
-          <div className="fill-box" />
           <Rating rating={product.rating} hasNumReviews={false} />
           <div className="price">R$ {product.price}</div>
         </div>

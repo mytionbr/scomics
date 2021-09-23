@@ -14,7 +14,7 @@
 }
 
 .card-body {
-  padding: 1rem;
+  padding: 2rem 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,6 +24,11 @@
   .card-title{
     color:rgb(160, 155, 155);
     padding: 1rem 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    flex-grow: 1;
   }
 
 }
@@ -42,4 +47,5 @@
 .price {
   font-size: 2rem;
   color:$medium-blue-color;
+  font-weight: 600;
 }
