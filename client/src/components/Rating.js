@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Rating({rating,numReviews,hasNumReviews = true}) {
+export default function Rating({rating,numReviews,showNumReviews = true}) {
     
       
     return (
@@ -17,7 +17,7 @@ export default function Rating({rating,numReviews,hasNumReviews = true}) {
                         }></i>
                 </span>)
             }
-            {hasNumReviews && (
+            {showNumReviews && (
                  <span>
                  {`${numReviews} reviews `}        
              </span>
