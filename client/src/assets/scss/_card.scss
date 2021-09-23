@@ -4,6 +4,8 @@
   margin: 1rem;
   height: 40.5rem;
   width: 20rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .card:hover {
@@ -17,6 +19,13 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  flex: 1 1 auto;
+
+  .card-title{
+    color:rgb(160, 155, 155);
+    padding: 1rem 0;
+  }
+
 }
 
 .card-header {
@@ -26,8 +35,8 @@
   height: 26rem;
 }
 
-.card-body > * {
-  margin-bottom: 0.5rem;
+.card-body > *,.card-body:not(h2) {
+  padding: 0.5rem 0;
 }
 
 .price {

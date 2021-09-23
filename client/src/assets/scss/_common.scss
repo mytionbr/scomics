@@ -24,7 +24,6 @@ h1 {
 
 h2 {
   font-size: 1.6rem;
-  padding: 1rem 0;
 }
 
 input,
@@ -89,4 +88,8 @@ button.small {
 
 .min-30 {
   min-width: 30rem;
+}
+
+.fill-box{
+  flex-grow: 1;
 }
