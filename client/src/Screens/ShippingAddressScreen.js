@@ -35,59 +35,59 @@ export default function ShippingAddressScreen(props) {
             <form className="form" onSubmit={submitHandler}>
                 <div>
                     <h1>
-                        Shipping Address
+                        Endereço para envio
                     </h1>
                 </div>
                     <div>
-                        <label htmlFor="fullName">Full Name</label>
+                        <label htmlFor="fullName">Nome completo</label>
                         <input
                             type="text"
                             id="fullName"
-                            placeholder="Enter full name"
+                            placeholder="Digite o seu nome completo"
                             value={fullName}
                             onChange={(e) => setFullName(e.target.value)}
                             required
                         ></input>
                     </div>
                     <div>
-                        <label htmlFor="address">Address</label>
+                        <label htmlFor="address">Endereço</label>
                         <input
                             type="text"
                             id="address"
-                            placeholder="Enter Address"
+                            placeholder="Digite o seu endereço"
                             value={address}
                             onChange={(e) => setAddress(e.target.value)}
                             required
                         ></input>
                     </div>
                     <div>
-                        <label htmlFor="city">City</label>
+                        <label htmlFor="city">Cidade</label>
                         <input
                             type="text"
                             id="city"
-                            placeholder="Enter City"
+                            placeholder="Digite a sua cidade"
                             value={city}
                             onChange={(e) => setCity(e.target.value)}
                             required
                         ></input>
                     </div>
                     <div>
-                        <label htmlFor="postalCode">Postal Code</label>
+                        <label htmlFor="postalCode">Código postal</label>
                         <input
                             type="text"
                             id="postalCode"
-                            placeholder="Enter postal code"
+                            placeholder="Digite o seu código postal"
                             value={postalCode}
                             onChange={(e) => setPostalCode(e.target.value)}
                             required
                         ></input>
                     </div>
                     <div>
-                        <label htmlFor="country">Country</label>
+                        <label htmlFor="country">País</label>
                         <input
                             type="text"
                             id="country"
-                            placeholder="Enter country"
+                            placeholder="Digite o seu país"
                             value={country}
                             onChange={(e) => setCountry(e.target.value)}
                             required

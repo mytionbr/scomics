@@ -37,7 +37,7 @@ export default function CartScreen(props) {
                 <MessageBox>
                     O carrinho está vazio.
                     <Link to="/">
-                    Ir para a loja
+                     Ir para a loja
                 </Link>
                 </MessageBox>
                 : 
@@ -77,7 +77,7 @@ export default function CartScreen(props) {
                                             </select>
                                         </div>
                                         <div>
-                                        ${item.price}
+                                        R$ {item.price}
                                     </div>
                                     <div>
                                         <button
@@ -102,7 +102,7 @@ export default function CartScreen(props) {
                         <li>
                             <h2>
                                 Total ({cartItems.reduce((a,c)=> a + c.qty,0)} items) :
-                                R${cartItems.reduce((a,c)=> a + c.price * c.qty, 0)}
+                                R$ {cartItems.reduce((a,c)=> a + c.price * c.qty, 0)}
                             </h2>
                         </li>
                         <li>

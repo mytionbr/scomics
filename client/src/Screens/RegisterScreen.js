@@ -41,60 +41,60 @@ export default function Registercreen(props) {
         <div>
             <form className="form" onSubmit={submitHandler}>
                 <div>
-                    <h1>Create Account</h1>
+                    <h1>Criar conta</h1>
                 </div>
                 
                     {loading && <LoadingBox></LoadingBox>}
                     {error && <MessageBox variant="danger">{error}</MessageBox>} 
                 
                     <div>
-                    <label htmlFor="name">Name</label>
+                    <label htmlFor="name">Nome</label>
                 <input
                     type="text"
                     id="name"
-                    placeholder="Enter name"
+                    placeholder="Digite o seu nome"
                     required
                     onChange={(e)=> setName(e.target.value)}/>
                 </div>
                
                 <div>
-                    <label htmlFor="email">Email address</label>
+                    <label htmlFor="email">Email</label>
                 <input
                     type="email"
                     id="email"
-                    placeholder="Enter email"
+                    placeholder="Digite o seu email"
                     required
                     onChange={(e)=> setEmail(e.target.value)}/>
                 </div>
                 <div>
-                <label htmlFor="password">Password</label>
+                <label htmlFor="password">Senha</label>
                 <input
                     type="password"
                     id="password"
-                    placeholder="Enter password"
+                    placeholder="Digite a sua senha"
                     required
                     onChange={(e)=> setPassword(e.target.value)}/>
                 </div>
                 <div>
-                <label htmlFor="confirmPassword">Confirm Password</label>
+                <label htmlFor="confirmPassword">Confirme a Senha</label>
                 <input
                     type="password"
                     id="confirmPassword"
-                    placeholder="Enter Confirm Password"
+                    placeholder="Digite a sua senha novamente"
                     required
                     onChange={(e)=> setConfirmPassword(e.target.value)}/>
                 </div>
                 <div>
                     <label />
                     <button className="primary" type="submit">
-                       Register
+                       Registrar
                     </button>
                 </div>
                 <div>
                     <label/>
                     <div>
-                        Already have an account? 
-                        <Link to={`/signin?redirect=${redirect}`}>Sign-in</Link>
+                        Já possuí uma conta?
+                        <Link to={`/signin?redirect=${redirect}`}> Entrar</Link>
                     </div>
                 </div>
             </form>

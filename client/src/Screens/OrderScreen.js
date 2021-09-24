@@ -62,47 +62,48 @@ export default function OrderScreen(props) {
         <div>
             <h1>Order {order._id}</h1>
             <div className="row top">
-                <div className="col-2">
+                <div className="col-2 p-1">
                     <ul>
                         <li>
-                            <div className="card card-body">
-                                <h2>Shipping</h2>
+                            <div className="card-simple paper flex column m-all">
+                                <h2>Envio</h2>
                                 <p>
-                                    <strong>Name: </strong> {order.shippingAddress.fullName}
-                                    <strong>Address: </strong>{order.shippingAddress.address},
+                                    <strong>Nome: </strong> {order.shippingAddress.fullName}
+                                </p>
+                                <p>
+                                <strong>Endereço: </strong>{order.shippingAddress.address},
                                     {order.shippingAddress.city}, {order.shippingAddress.postalCode},
                                     {order.shippingAddress.country}
-                                   
                                 </p>
                                 {order.isDelivered ? (
                                     <MessageBox variant="success">
-                                        Delivered at {order.deliveredAt}
+                                        Entregue em {order.deliveredAt}
                                     </MessageBox>
                                 ): (
-                                    <MessageBox variant="danger">Not Delivered</MessageBox>
+                                    <MessageBox variant="danger">Não entregue</MessageBox>
                                 )
                                 }
                             </div>
                         </li>
                         <li>
-                            <div className="card card-body">
-                                <h2>Payment</h2>
+                            <div className="card-simple paper flex column m-all">
+                                <h2>Pagamento</h2>
                                 <p>
-                                    <strong>Method: </strong> {order.paymentMethod}                                   
+                                    <strong>Método: </strong> {order.paymentMethod}                                   
                                 </p>
                                 {order.isPaid ? (
                                     <MessageBox variant="success">
-                                        Paid at {order.paidAt}
+                                        Pago em {order.paidAt}
                                     </MessageBox>
                                 ): (
-                                    <MessageBox variant="danger">Not Paid</MessageBox>
+                                    <MessageBox variant="danger">Não pago</MessageBox>
                                 )
                                 }
                             </div>
                         </li>
                         <li>
-                            <div className="card card-body">
-                                <h2>Order Items</h2>
+                            <div className="card-simple paper flex column m-all">
+                                <h2>Lista de itens</h2>
                                 <ul>
                         {
                             order.orderItems.map((item)=>(
@@ -120,7 +121,7 @@ export default function OrderScreen(props) {
                                             </Link>
                                         </div>
                                         <div>
-                                            {item.qty} x ${item.price} = ${item.qty * item.price}
+                                            {item.qty} x R$ {item.price} = R$ {item.qty * item.price}
                                     </div>
                                     </div>
                                   
@@ -132,35 +133,35 @@ export default function OrderScreen(props) {
                         </li>
                     </ul>
                 </div>
-                <div className="col-1">
-                    <div className="card card-body">
+                <div className="col-1 p-1">
+                    <div className="card-simple paper flex column m-all">
                         <ul>
                             <li>
-                                <h2>Order Summary</h2>
+                                <h2>Pedido</h2>
                             </li>
                             <li>
                                 <div className="row">
-                                    <div>Items</div>
-                                    <div>${order.itemsPrice.toFixed(2)}</div>
+                                    <div>Itens</div>
+                                    <div>R$ {order.itemsPrice.toFixed(2)}</div>
                                 </div>
                             </li>
                             <li>
                                 <div className="row">
-                                    <div>Shipping</div>
-                                    <div>${order.shippingPrice.toFixed(2)}</div>
+                                    <div>Envio</div>
+                                    <div>R$ {order.shippingPrice.toFixed(2)}</div>
                                 </div>
                             </li>
                             <li>
                                 <div className="row">
-                                    <div>Tax</div>
-                                    <div>${order.taxPrice.toFixed(2)}</div>
+                                    <div>Taxa</div>
+                                    <div>R$ {order.taxPrice.toFixed(2)}</div>
                                 </div>
                             </li>
                             <li>
                                 <div className="row">
-                                    <div>Order Total</div>
+                                    <div>Preço total</div>
                                     <div>
-                                        <strong>${order.totalPrice.toFixed(2)}</strong>
+                                        <strong>R$ {order.totalPrice.toFixed(2)}</strong>
                                     </div>
                                 </div>
                             </li>

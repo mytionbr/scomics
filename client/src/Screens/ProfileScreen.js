@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { detailsUser, updateUserProfile } from '../actions/userActions'
 import LoadingBox from '../components/LoadingBox'
+import LoadingOverlay from '../components/LoadingOverlay'
 import MessageBox from '../components/MessageBox'
 import { USER_UPDATE_PROFILE_RESET } from '../constants/userConstants'
 
@@ -51,11 +52,11 @@ export default function ProfileScreen() {
         <div>
             <form className="form" onSubmit={submitHandler}>
                 <div>
-                    <h1>User Profile</h1>
+                    <h1>Perfil</h1>
                 </div>
                 {
                     loading
-                    ? <LoadingBox></LoadingBox>
+                    ? <LoadingOverlay />
                     : error 
                     ? <MessageBox variant="danger">{error}</MessageBox> 
                     :
@@ -70,15 +71,15 @@ export default function ProfileScreen() {
                     {
                         successUpdate &&  
                         <MessageBox variant="success">
-                            Profile Update Successfully
+                            Perfil atualizado com sucesso!!
                         </MessageBox> 
                     }
                         <div>
-                            <label htmlFor="name">Name</label>
+                            <label htmlFor="name">Nome</label>
                             <input
                                 id="name"
                                 type="text"
-                                placeholder="Entre name"
+                                placeholder="Digite o seu nome"
                                 value={name}
                                 onChange={(e)=> setName(e.target.value)}
                                 />
@@ -88,28 +89,28 @@ export default function ProfileScreen() {
                             <input
                                 id="email"
                                 type="email"
-                                placeholder="Entre email"
+                                placeholder="Digite o seu endereço de email"
                                 value={email}
                                 onChange={(e)=> setEmail(e.target.value)}
 
                                 />
                         </div>
                         <div>
-                            <label htmlFor="password">Password</label>
+                            <label htmlFor="password">Senha</label>
                             <input
                                 id="password"
                                 type="password"
-                                placeholder="Entre password"
+                                placeholder="Digite a sua senha"
                                 onChange={(e)=> setPassword(e.target.password)}
 
                                 />
                         </div>
                         <div>
-                            <label htmlFor="confirmPassword">Confirm Password</label>
+                            <label htmlFor="confirmPassword">Confirme a senha</label>
                             <input
                                 id="confirmPassword"
                                 type="confirmPassword"
-                                placeholder="Entre Confirm Password"
+                                placeholder="Digite a sua senha novamente"
                                 onChange={(e)=> setConfirmPassword(e.target.confirmPassword)}
 
                             />
@@ -117,7 +118,7 @@ export default function ProfileScreen() {
                         <div>
                             <label/>
                             <button className="primary" type="submit">
-                                Update
+                                Salvar
                             </button>
                         </div>
                     </>

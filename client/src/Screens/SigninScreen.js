@@ -34,41 +34,41 @@ export default function SigninScreen(props) {
         <div>
             <form className="form" onSubmit={submitHandler}>
                 <div>
-                    <h1>Sign In</h1>
+                    <h1>Login</h1>
                 </div>
                 
                     {loading && <LoadingBox></LoadingBox>}
                     {error && <MessageBox variant="danger">{error}</MessageBox>} 
                 
                 <div>
-                <label htmlFor="email">Email address</label>
+                <label htmlFor="email">Email</label>
                 <input
                     type="email"
                     id="email"
-                    placeholder="Enter email"
+                    placeholder="Digite o endereço de email"
                     required
                     onChange={(e)=> setEmail(e.target.value)}/>
                 </div>
                 <div>
-                <label htmlFor="email">Password</label>
+                <label htmlFor="email">Senha</label>
                 <input
                     type="password"
                     id="password"
-                    placeholder="Enter password"
+                    placeholder="Digite a senha"
                     required
                     onChange={(e)=> setPassword(e.target.value)}/>
                 </div>
                 <div>
                     <label />
                     <button className="primary" type="submit">
-                        Sign In
+                       Entrar
                     </button>
                 </div>
                 <div>
                     <label/>
                     <div>
-                        New customer ? 
-                        <Link to={`/register?redirect=${redirect}`}>Create your account</Link>
+                        Novo cliente? 
+                        <Link to={`/register?redirect=${redirect}`}> Criar nova conta</Link>
                     </div>
                 </div>
             </form>
