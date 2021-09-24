@@ -17,6 +17,10 @@ span.badge {
   padding: 0.2rem 0.7rem;
   font-size: 1.4rem;
   margin-left: 0.2rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+
 }
 
 .icon-link{
@@ -24,6 +28,7 @@ span.badge {
   flex-direction:column;
   align-items: center;
   margin:0 1rem;
+  position: relative;
 
   &:hover {
     color: $light-orange-color;

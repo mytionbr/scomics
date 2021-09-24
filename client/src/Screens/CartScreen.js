@@ -35,9 +35,9 @@ export default function CartScreen(props) {
                 <h1>Shopping cart</h1>
                 {cartItems.length === 0 ?
                 <MessageBox>
-                    Cart is empty.
+                    O carrinho está vazio.
                     <Link to="/">
-                    Go Shopping
+                    Ir para loja
                 </Link>
                 </MessageBox>
                 : 
@@ -84,7 +84,7 @@ export default function CartScreen(props) {
                                             type="button"
                                             onClick={() => removeFromCartHandler(item.product)}
                                         >
-                                            Delete
+                                            Deletar
                                         </button>
                                     </div>
                                     </div>
@@ -96,23 +96,23 @@ export default function CartScreen(props) {
                 )
                 }
             </div>
-            <div className="col-1">
-                <div className="card card-body">
+            <div className="col-1 p-1">
+                <div className="card-simple paper">
                     <ul>
                         <li>
                             <h2>
-                                Subtotal ({cartItems.reduce((a,c)=> a + c.qty,0)} items) :
-                                ${cartItems.reduce((a,c)=> a + c.price * c.qty, 0)}
+                                Total ({cartItems.reduce((a,c)=> a + c.qty,0)} items) :
+                                R${cartItems.reduce((a,c)=> a + c.price * c.qty, 0)}
                             </h2>
                         </li>
                         <li>
                             <button
                                 type="button"
                                 onClick={checkoutHandler}
-                                className="primary  block"
+                                className="hover  block"
                                 disabled={cartItems.length === 0}
                             >
-                                Proceed to Checkout
+                               Fazer o check-out
                             </button>
                         </li>
                     </ul>
