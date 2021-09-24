@@ -32,12 +32,12 @@ export default function CartScreen(props) {
     return (
         <div className="row top">
             <div className="col-2">
-                <h1>Shopping cart</h1>
+                <h1>Carrinho</h1>
                 {cartItems.length === 0 ?
                 <MessageBox>
                     O carrinho está vazio.
                     <Link to="/">
-                    Ir para loja
+                    Ir para a loja
                 </Link>
                 </MessageBox>
                 : 
