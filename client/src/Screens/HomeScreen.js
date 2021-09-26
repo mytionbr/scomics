@@ -5,6 +5,7 @@ import MessageBox from "../components/MessageBox";
 import { useDispatch, useSelector } from "react-redux";
 import { listProducts } from "../actions/productsActions";
 import LoadingOverlay from "../components/LoadingOverlay";
+import ProductCarousel from "../components/ProductCarousel";
 
 export default function HomeScreen() {
   const dispatch = useDispatch()
@@ -24,12 +25,8 @@ export default function HomeScreen() {
         ) : (      
         <div>
         
-
-            <div className="row center">
-            {products.map((product) => (
-                <Product product={product} id={product._id} />
-            ))}
-            </div>
+            <ProductCarousel products={products}/>
+           
         </div>
         )}
     </div>

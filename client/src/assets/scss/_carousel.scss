@@ -1,0 +1,24 @@
+.slick-list{
+    width: 900px;
+   
+}
+
+.slick-arrow{
+    width: 5rem;
+    height: 5rem;
+   
+}
+
+.slick-prev:before,.slick-next:before {
+    font-size: 4rem;
+    color:$medium-blue-color;
+
+    
+}
+.slick-prev{
+    left: -6rem;
+}
+
+.slick-next {
+    right: -6rem;
+}

@@ -2,10 +2,10 @@ import React from "react";
 import Rating from "./Rating";
 import { Link } from "react-router-dom";
 
-export default function Product({ product, id }) {
+export default function Product({ product }) {
   return (
     <Link to={`product/${product._id}`}>
-      <div key={id} className="card">
+      <div key={product._id} className="card">
         <div className="card-header">
           <img className="medium" src={product.image} alt="procuct" />
         </div>
