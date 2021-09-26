@@ -60,7 +60,7 @@ var settings = {
 };
 
 function ProductCarousel({ products }) {
- 
+ console.log(products)
 
   return (
     <div className="row center carousel">

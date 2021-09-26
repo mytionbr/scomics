@@ -1,8 +1,10 @@
-.rating span {
+.rating span:not(.reviews) {
   color: #f0c040;
   margin: 0.1rem;
+
+  .not-filled{
+    color: #404040 !important;
+  }
 }
 
-.rating span:last-child {
-  color: #404040;
-}
+
