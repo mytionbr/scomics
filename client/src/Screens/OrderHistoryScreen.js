@@ -4,6 +4,7 @@ import { listOrderMine } from '../actions/orderAction'
 import LoadingBox from '../components/LoadingBox'
 import LoadingOverlay from '../components/LoadingOverlay'
 import MessageBox from '../components/MessageBox'
+import { moneyFormatter } from '../utils/moneyFormatter'
 
 export default function OrderHistoryScreen(props) {
     const orderMineList = useSelector(state => state.orderMineList)
@@ -35,7 +36,7 @@ export default function OrderHistoryScreen(props) {
                                   <tr key={order._id}>
                                       <td>{order._id}</td>
                                       <td>{order.createdAt}</td>
-                                      <td>R$ {order.totalPrice.toFixed(2)}</td>
+                                      <td> {moneyFormatter(order.totalPrice)}</td>
                                       <td>{order.isPaid ? order.paidAt.substring(0,10) : 'No'}</td>
                                       <td>{order.isDelivered ? order.deliveredAt.substring(0,10) : 'No'}</td>
                                       <td>

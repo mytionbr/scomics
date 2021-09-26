@@ -6,6 +6,7 @@ import CheckoutSteps from "../components/CheckoutSteps";
 import { ORDER_CREATE_RESET } from "../constants/orderConstants";
 import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
+import { moneyFormatter } from "../utils/moneyFormatter";
 
 export default function PlaceOrderScreen(props) {
   const cart = useSelector((state) => state.cart);
@@ -85,7 +86,7 @@ export default function PlaceOrderScreen(props) {
                           </Link>
                         </div>
                         <div>
-                          {item.qty} x R$ {item.price} = R$ {item.qty * item.price}
+                          {item.qty} x {moneyFormatter(item.price)} = {moneyFormatter(item.qty * item.price)}
                         </div>
                       </div>
                     </li>
@@ -104,26 +105,26 @@ export default function PlaceOrderScreen(props) {
               <li>
                 <div className="row">
                   <div>Itens</div>
-                  <div>R$ {cart.itemsPrice.toFixed(2)}</div>
+                  <div>{moneyFormatter(cart.itemsPrice)}</div>
                 </div>
               </li>
               <li>
                 <div className="row">
                   <div>Envio</div>
-                  <div>R$ {cart.shippingPrice.toFixed(2)}</div>
+                  <div>{moneyFormatter(cart.shippingPrice)}</div>
                 </div>
               </li>
               <li>
                 <div className="row">
                   <div>Taxa</div>
-                  <div>R$ {cart.taxPrice.toFixed(2)}</div>
+                  <div>{moneyFormatter(cart.taxPrice)}</div>
                 </div>
               </li>
               <li>
                 <div className="row">
                   <div>Total</div>
                   <div>
-                    <strong>R$ {cart.totalPrice.toFixed(2)}</strong>
+                    <strong>{moneyFormatter(cart.totalPrice)}</strong>
                   </div>
                 </div>
               </li>

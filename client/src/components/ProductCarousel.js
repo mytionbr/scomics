@@ -57,7 +57,6 @@ var settings = {
   slidesToShow: 3,
   slidesToScroll: 4,
   centerMode: true,
-  
 };
 
 function ProductCarousel({ products }) {

@@ -1,6 +1,7 @@
 import React from "react";
 import Rating from "./Rating";
 import { Link } from "react-router-dom";
+import { moneyFormatter } from "../utils/moneyFormatter";
 
 export default function Product({ product }) {
   return (
@@ -13,7 +14,7 @@ export default function Product({ product }) {
         <div className="card-body">
           <h2 className="card-title">{product.name}</h2>
           <Rating rating={product.rating} showNumReviews={false}  numReviews={product.numReviews} />
-          <div className="price">R$ {product.price}</div>
+          <div className="price">{moneyFormatter(product.price)}</div>
         </div>
       </div>
     </Link>

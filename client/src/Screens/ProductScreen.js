@@ -6,6 +6,7 @@ import LoadingBox from "../components/LoadingBox";
 import LoadingOverlay from "../components/LoadingOverlay";
 import MessageBox from "../components/MessageBox";
 import Rating from "../components/Rating";
+import { moneyFormatter } from "../utils/moneyFormatter";
 
 export default function ProductScreen(props) {
   const productDetails = useSelector((state) => state.productDetails);
@@ -46,7 +47,7 @@ export default function ProductScreen(props) {
                     numReviews={product.numReviews}
                   ></Rating>
                 </li>
-                <li>Preço : R$ {product.price}</li>
+                <li>Preço : {moneyFormatter(product.price)}</li>
                 <li>
                   Descrição :
                   <p>{product.description}</p>
@@ -59,7 +60,7 @@ export default function ProductScreen(props) {
                   <li>
                     <div className="row">
                       <div>Preço: </div>
-                      <div className="price">R$ {product.price}</div>
+                      <div className="price">{moneyFormatter(product.price)}</div>
                     </div>
                   </li>
                   <li>

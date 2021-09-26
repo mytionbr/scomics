@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { addToCart, removeFromCart } from '../actions/cartActions';
 import { Link } from 'react-router-dom'
 import MessageBox from '../components/MessageBox';
+import { moneyFormatter } from '../utils/moneyFormatter';
  
 export default function CartScreen(props) {
     const productId = props.match.params.id;
@@ -77,7 +78,7 @@ export default function CartScreen(props) {
                                             </select>
                                         </div>
                                         <div>
-                                        R$ {item.price}
+                                       {moneyFormatter(item.price)}
                                     </div>
                                     <div>
                                         <button
@@ -101,8 +102,8 @@ export default function CartScreen(props) {
                     <ul>
                         <li>
                             <h2>
-                                Total ({cartItems.reduce((a,c)=> a + c.qty,0)} items) :
-                                R$ {cartItems.reduce((a,c)=> a + c.price * c.qty, 0)}
+                                Total ({cartItems.reduce((a,c)=> a + c.qty,0)} items):
+                                {moneyFormatter(cartItems.reduce((a,c)=> a + c.price * c.qty, 0))}
                             </h2>
                         </li>
                         <li>
