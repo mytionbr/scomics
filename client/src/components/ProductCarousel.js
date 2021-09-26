@@ -5,51 +5,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
-const items = [
-  {
-    _id:1,
-    name: 'item',
-    price:300,
-    image: 'https://m.media-amazon.com/images/I/71jG+e7roXL._AC_SY300_SX300_.jpg'
-  },
-  {
-    _id:1,
-    name: 'item',
-    price:300,
-    image: 'https://m.media-amazon.com/images/I/71jG+e7roXL._AC_SY300_SX300_.jpg'
-  },
-  {
-    _id:1,
-    name: 'item',
-    price:300,
-    image: 'https://m.media-amazon.com/images/I/71jG+e7roXL._AC_SY300_SX300_.jpg'
-  },
-  {
-    _id:1,
-    name: 'item',
-    price:300,
-    image: 'https://m.media-amazon.com/images/I/71jG+e7roXL._AC_SY300_SX300_.jpg'
-  },
-  {
-    _id:1,
-    name: 'item',
-    price:300,
-    image: 'https://m.media-amazon.com/images/I/71jG+e7roXL._AC_SY300_SX300_.jpg'
-  },
-  {
-    _id:1,
-    name: 'item',
-    price:300,
-    image: 'https://m.media-amazon.com/images/I/71jG+e7roXL._AC_SY300_SX300_.jpg'
-  },
-  {
-    _id:1,
-    name: 'item',
-    price:300,
-    image: 'https://m.media-amazon.com/images/I/71jG+e7roXL._AC_SY300_SX300_.jpg'
-  },
-  
-]
 var settings = {
   dots: true,
   infinite: true,
@@ -60,8 +15,6 @@ var settings = {
 };
 
 function ProductCarousel({ products }) {
- console.log(products)
-
   return (
     <div className="row center carousel">
        <Slider {...settings}>
