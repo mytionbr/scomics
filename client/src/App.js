@@ -19,6 +19,7 @@ import SearchScreen from "./Screens/SearchScreen";
 import { useEffect, useState } from "react";
 import { listProductCategories } from "./actions/productsActions";
 import SlideDrawer from "./components/SlideDrawer";
+import SearchAccordion from "./components/SearchAccordion";
 
 function App() {
   const cart = useSelector((state)=> state.cart)
@@ -35,9 +36,14 @@ function App() {
   }, [dispatch]);
 
   const [drawerOpen, setDrawerOpen] = useState(false)
+  const [searchBarOpen, setSearchBarOpen] = useState(false)
 
   const handleDrawerToggleClick  = ()=>{
     setDrawerOpen(!drawerOpen)
+  }
+
+  const handleSearchToggleClick = ()=>{
+    setSearchBarOpen(!searchBarOpen)
   }
 
   return (
@@ -48,7 +54,7 @@ function App() {
       <header className="row">
         <div className="row">
           <IconLink href="#" iconName="fas fa-bars" onClick={handleDrawerToggleClick}>Menu</IconLink>
-          <IconLink href="/" iconName="fas fa-search">Buscar</IconLink>
+          <IconLink href="#" iconName="fas fa-search" onClick={handleSearchToggleClick}>Buscar</IconLink>
         </div>
         <div>
           <Link className="brand" to="/">
@@ -120,11 +126,12 @@ function App() {
                   </li>
                 </ul>
               </div>
-            )}
-          
+            )}          
         </div>
       </header>
       <main>
+      <SearchAccordion show={searchBarOpen} handleShow={handleSearchToggleClick}/>
+      <div className="container-main">
       <Route path="/signin" component={SigninScreen}></Route>
       <Route path="/register" component={RegisterScreen}></Route>
       <Route path="/cart/:id?" component={CartScreen}></Route>
@@ -156,7 +163,7 @@ function App() {
           ></Route>
       <PrivateRoute path="/profile" component={ProfileScreen} exact></PrivateRoute>
       <Route path="/" component={HomeScreen} exact></Route>
-       
+      </div>
       </main>
       <footer className="row center">©Scomics</footer>
     </div>

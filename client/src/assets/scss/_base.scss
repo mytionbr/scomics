@@ -52,7 +52,12 @@ body {
   
   main{
     grid-area: main;
-    padding: 1rem;
+
+    .container-main{
+      padding: 1rem;
+
+    }
+
   }
   
   footer{

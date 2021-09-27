@@ -1,0 +1,43 @@
+.panel{
+    display: block;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    background-color: $light-blue-color;
+    max-height: 0;
+    -webkit-transition:  max-height 0.5s ease-in-out;
+    -moz-transition:  max-height 0.5s ease-in-out;
+    -ms-transition:  max-height 0.5s ease-in-out;
+    transition:  max-height 0.5s ease-in-out;
+  
+
+    &.active{
+        max-height: 10rem;
+    }
+
+    .search-accordion{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;       
+    
+        input{
+            width: 60%;
+            padding: 1rem;
+            font-size: 1.5rem;
+            margin-right: 0.1rem;
+        }
+    
+        button{
+            padding: 1rem;
+            font-size: 1.5rem;
+            color:#fff;
+            background-color: $light-orange-color;
+        }
+    
+    }
+}
+
+
+
