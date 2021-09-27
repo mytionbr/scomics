@@ -16,8 +16,9 @@ import ProfileScreen from "./Screens/ProfileScreen";
 import PrivateRoute from "./components/PrivateRoute";
 import IconLink from "./components/IconLink";
 import SearchScreen from "./Screens/SearchScreen";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { listProductCategories } from "./actions/productsActions";
+import SlideDrawer from "./components/SlideDrawer";
 
 function App() {
   const cart = useSelector((state)=> state.cart)
@@ -33,13 +34,20 @@ function App() {
     dispatch(listProductCategories());
   }, [dispatch]);
 
+  const [drawerOpen, setDrawerOpen] = useState(false)
+
+  const handleDrawerToggleClick  = ()=>{
+    setDrawerOpen(!drawerOpen)
+  }
+
   return (
     <BrowserRouter>
    
     <div className="grid-container">
+      <SlideDrawer show={drawerOpen} handleShow={handleDrawerToggleClick} />
       <header className="row">
         <div className="row">
-          <IconLink href="/cart" iconName="fas fa-bars">Menu</IconLink>
+          <IconLink href="#" iconName="fas fa-bars" onClick={handleDrawerToggleClick}>Menu</IconLink>
           <IconLink href="/" iconName="fas fa-search">Buscar</IconLink>
         </div>
         <div>
