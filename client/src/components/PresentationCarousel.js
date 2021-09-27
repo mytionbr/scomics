@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import Livros from "../assets/images/Livros.mp4"
 import hqs from "../assets/images/hqs.jpg"
 import mangas from "../assets/images/mangas.jpg"
+import { Link } from 'react-router-dom';
 var settings = {
     dots: true,
     infinite: true,
@@ -20,13 +21,19 @@ function PresentationCarousel() {
         <div className="row center carousel">
             <Slider {...settings}>
             <div className="carousel-container">
-                    <video className="w-full" autoPlay loop  src={Livros} alt="hqs" />
+                    <Link to="/search/category/livros">
+                        <video className="w-full" autoPlay loop  src={Livros} alt="hqs" />
+                    </Link>
                 </div>
                 <div className="carousel-container">
-                    <img className="w-full"  src={hqs} alt="hqs" />
+                    <Link to="/search/category/hqs">
+                         <img className="w-full"  src={hqs} alt="hqs" />
+                    </Link>
                 </div>
                 <div className="carousel-container">
-                    <img className="w-full"  src={mangas} alt="mangás" />
+                    <Link to="/search/category/mangás">
+                        <img className="w-full"  src={mangas} alt="mangás" />
+                    </Link>
                 </div>
             </Slider>
         </div>

@@ -33,7 +33,7 @@ export default function HomeScreen() {
             <ProductCarousel products={products.filter(item=>item.category === 'livros')}/>
         </div>
         <div className="container py-3">
-        <h2 className="session-title">Hq's</h2>
+        <h2 className="session-title">HQs</h2>
           <ProductCarousel products={products.filter(item=>item.category === 'hqs')}/>
       </div>
       <div className="container py-3">
