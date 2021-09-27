@@ -54,6 +54,9 @@ function SearchScreen(props) {
         return `/search/category/${filterCategory}/name/${filterName}/min/${filterMin}/max/${filterMax}/rating/${filterRating}/order/${sortOrder}/pageNumber/${filterPage}`;
     }
 
+    const cleanFilter = ()=>{
+        return `/search/category/all/name/all/min/0/max/0/rating/all/order/all/pageNumber/1`;
+    }
 
     return (
         <div>
@@ -63,7 +66,14 @@ function SearchScreen(props) {
                 ) : error ? (
                     <MessageBox variant="danger">{error}</MessageBox>
                 ) : (
+                    <div className="flex center space-1">
                     <div>{products.length} resultados</div>
+                        <div className='chip'>
+                            <Link to={cleanFilter}>
+                                Limpar
+                            </Link>
+                        </div>
+                    </div>
                 )}
                 <div>
                     Ordenado por {' '}
@@ -81,9 +91,9 @@ function SearchScreen(props) {
                 </div>
             </div>
             <div className="row top">
-                <div className="col-1">
-                    <h3>Departamento</h3>
-                    <div>
+                <div className="col-1 paper filters-panel">
+                    <div className="pb-1">
+                        <h3 className="highlight">Departamento</h3>
                         {loadingCategories ? (
                             <LoadingBox />
                         ) : errorCategories ? (
@@ -111,8 +121,8 @@ function SearchScreen(props) {
                             </ul>
                         )}
                     </div>
-                    <div>
-                        <h3>Preço</h3>
+                    <div className="pb-1">
+                        <h3 className="highlight">Preço</h3>
                         <ul>
                             {prices.map((p)=> (
                                 <li key={p.name}>
@@ -129,15 +139,16 @@ function SearchScreen(props) {
                         </ul>
                     </div>
                     <div>
-                        <h3>Média de reviews</h3>
+                        <h3 className="highlight">Média de reviews</h3>
                         <ul>
-                            {ratings.map((r)=>(
-                                <li key={r.name}>
+                            {ratings.map((r,i)=>(
+                                <li key={i} >
                                     <Link
                                         to={getFilterUrl({rating: r.rating})}
-                                        className={`row ${r.rating}` === `${rating}` ? 'active' : ''}
+                                        className={`${r.rating}` === `${rating}` ? 'active' : ''}
+                
                                     >
-                                        <Rating showNumReviews={false} rating={r.rating}/> {r.name}
+                                        <Rating showNumReviews={false} rating={r.rating}/> e acima 
                                     </Link>
                                 </li>
                             ))}
@@ -166,6 +177,7 @@ function SearchScreen(props) {
                                             key={x+1}
                                             to={getFilterUrl({page: x + 1})}
                                         >
+                                            {x + 1}
                                         </Link>
                                     ) )}
                                 </div>

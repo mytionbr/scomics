@@ -1,0 +1,13 @@
+.filters-panel{
+    a{
+        color:darken(#aaa, 20%);
+        margin-left: 1rem;
+        &:hover{
+            color:$light-orange-color;
+        }
+        &.active{
+            color:$light-orange-color;
+        }   
+    }
+}
+

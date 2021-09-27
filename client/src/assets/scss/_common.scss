@@ -182,12 +182,30 @@ button.hover{
   padding: 3rem 0;
 }
 
+.py-1{
+  padding: 1rem 0;
+}
+
+.pb-1{
+  padding-bottom: 1rem;
+}
+
 .flex{
   display: flex;
 }
 
 .column{
   flex-direction: column;
+}
+
+.center{
+  align-items: center;
+}
+
+.space-1{
+  &> *{
+    margin: 1rem;
+  }
 }
 
 .m-all{
@@ -207,3 +225,25 @@ button.hover{
   font-weight: 700;
   line-height: 2;
 }
+
+.highlight{
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.chip{
+  background-color: #fff;
+  border-radius: 2rem;
+  padding: 1rem;
+  cursor: pointer;
+  &:hover{
+    background-color:  darken(#aaa, 5%);
+    &>a{
+      color:#fff
+    }
+  }
+}
+
+.active{
+  color:$light-orange-color;
+}  

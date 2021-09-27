@@ -1,10 +1,13 @@
-.rating span:not(.reviews) {
-  color: #f0c040;
-  margin: 0.1rem;
-
-  .not-filled{
-    color: #404040 !important;
+.rating{
+  display: inline-block;
+  span:not(.reviews) {
+    color: #f0c040;
+    margin: 0.1rem;
+    .not-filled{
+      color: #404040 !important;
+    }
   }
-}
+} 
+
 
 
