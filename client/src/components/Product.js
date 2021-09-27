@@ -5,7 +5,7 @@ import { moneyFormatter } from "../utils/moneyFormatter";
 
 export default function Product({ product }) {
   return (
-    <Link to={`product/${product._id}`}>
+    <Link to={`/product/${product._id}`}>
       <div key={product._id} className="card">
         <div className="card-header">
           <img className="medium" src={product.image} alt="procuct" />

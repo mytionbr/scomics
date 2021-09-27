@@ -15,6 +15,9 @@ import OrderHistoryScreen from "./Screens/OrderHistoryScreen";
 import ProfileScreen from "./Screens/ProfileScreen";
 import PrivateRoute from "./components/PrivateRoute";
 import IconLink from "./components/IconLink";
+import SearchScreen from "./Screens/SearchScreen";
+import { useEffect } from "react";
+import { listProductCategories } from "./actions/productsActions";
 
 function App() {
   const cart = useSelector((state)=> state.cart)
@@ -25,6 +28,10 @@ function App() {
   const signoutHandler = () =>{
     dispatch(signout())
   }
+
+  useEffect(() => {
+    dispatch(listProductCategories());
+  }, [dispatch]);
 
   return (
     <BrowserRouter>
@@ -119,6 +126,26 @@ function App() {
       <Route path="/placeorder" component={PlaceOrderScreen} exact></Route>
       <Route path="/order/:id" component={OrderScreen}></Route>
       <Route path="/orderhistory" component={OrderHistoryScreen} exact></Route>
+      <Route
+            path="/search/name/:name?"
+            component={SearchScreen}
+            exact
+          ></Route>
+          <Route
+            path="/search/category/:category"
+            component={SearchScreen}
+            exact
+          ></Route>
+          <Route
+            path="/search/category/:category/name/:name"
+            component={SearchScreen}
+            exact
+          ></Route>
+          <Route
+            path="/search/category/:category/name/:name/min/:min/max/:max/rating/:rating/order/:order/pageNumber/:pageNumber"
+            component={SearchScreen}
+            exact
+          ></Route>
       <PrivateRoute path="/profile" component={ProfileScreen} exact></PrivateRoute>
       <Route path="/" component={HomeScreen} exact></Route>
        

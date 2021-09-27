@@ -10,7 +10,7 @@ var settings = {
   infinite: true,
   speed: 500,
   slidesToShow: 3,
-  slidesToScroll: 4,
+  slidesToScroll: 1,
   centerMode: true,
 };
 
