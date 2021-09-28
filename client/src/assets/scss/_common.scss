@@ -247,3 +247,31 @@ button.hover{
 .active{
   color:$light-orange-color;
 }  
+
+.w-220{
+  width: 22rem;
+  @media (max-width: 60rem) {
+    width: 8rem;
+  }
+}
+
+.justify-between{
+  justify-content: space-between;
+}
+
+.none{
+  display: none;
+}
+
+.sm-down{
+  @media (max-width: 60rem) {
+    display: none;
+  }
+}
+
+.sm-up{
+  @media (max-width: 60rem) {
+    display: block;
+  }
+}
+

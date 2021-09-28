@@ -52,16 +52,21 @@ function App() {
     <div className="grid-container">
       <SlideDrawer show={drawerOpen} handleShow={handleDrawerToggleClick} />
       <header className="row">
-        <div className="row">
+        <div className="flex w-220">
           <IconLink href="#" iconName="fas fa-bars" onClick={handleDrawerToggleClick}>Menu</IconLink>
-          <IconLink href="#" iconName="fas fa-search" onClick={handleSearchToggleClick}>Buscar</IconLink>
+          <div className="sm-down">
+            <IconLink href="#"  iconName="fas fa-search" onClick={handleSearchToggleClick}>Buscar</IconLink>
+          </div>
         </div>
         <div>
           <Link className="brand" to="/">
             Scomics
           </Link >
         </div>
-        <div className="row">
+        <div className="none sm-up">
+          <IconLink href="#"  iconName="fas fa-search" onClick={handleSearchToggleClick}>Buscar</IconLink>
+        </div>
+        <div className="flex w-220 sm-down">
         <IconLink href="/cart" iconName="fas fa-shopping-cart">
           Carrinho
               {

@@ -1,6 +1,9 @@
 .slick-list{
     width: 900px;
-   
+
+    @media (max-width: 50rem) {
+        max-width: 25rem;
+    }
 }
 
 .slick-arrow{
