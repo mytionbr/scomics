@@ -35,7 +35,7 @@ $ cd scomics
   - Navegue até a pasta raiz do projeto e crie um arquivo `.env`
   - Crie uma variável local `MONGODB_URL=mongodb://localhost/scomics`
   
-- Para um setup no Cloud MongoDB
+- Para um setup no MongoDB Cloud
   - Crie um banco de dados no [MongoDB Cloud](https://www.mongodb.com/pt-br/cloud)
   - Navegue até a pasta raiz do projeto e crie um arquivo `.env`
   - Crie uma váriavel local `MONGODB_URL=your_authentication_url_to_mongo_db`
@@ -68,7 +68,7 @@ yarn start // or npm start
 
 - Rode o backend
 - Entre em um navegador
-- Acesse a url [http://localhost:5000/api/products/seed](http://localhost:5000/api/products/seed) e [http://localhost:5000/api/users/seed](http://localhost:5000/api/users/seed)
+- Acesse as urls [http://localhost:5000/api/products/seed](http://localhost:5000/api/products/seed) e [http://localhost:5000/api/users/seed](http://localhost:5000/api/users/seed)
 - Isso irá adicionar 15 produtos e 2 usuários (Um cliente e um adm) no BD
 
 
