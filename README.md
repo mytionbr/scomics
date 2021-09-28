@@ -15,7 +15,7 @@ Por enquanto a aplicação apresenta somente o fluxo do cliente:
 
 - O backend é fornecido através de uma aplicação NodeJs;
 - As requisições, respostas e rotas são realizadas por meio do middleware do Express;
-- A modelagem de dados da aplicação é realizada utilizando os esquemas Mongoose, que por sua vez vai popular um banco de dados MongoDB;
+- A modelagem de dados da aplicação é realizada utilizando os esquemas Mongoose, que por sua vez irão popular um banco de dados MongoDB;
 - Os componente de IU são construídos e exibidos através da biblioteca ReactJs;
 - O estado dos componentes do frontend são gerenciados por meio da biblioteca Redux;
 
