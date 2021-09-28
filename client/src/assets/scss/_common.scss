@@ -228,7 +228,11 @@ button.hover{
 
 .highlight{
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+}
+
+.flex-end{
+  justify-content: flex-end;
 }
 
 .chip{
@@ -246,7 +250,8 @@ button.hover{
 
 .active{
   color:$light-orange-color;
-}  
+}
+
 
 .w-220{
   width: 22rem;

@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.576b7ddb.chunk.css",
+    "main.js": "/static/js/main.2003ad32.chunk.js",
+    "main.js.map": "/static/js/main.2003ad32.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.923183e9.js",
+    "runtime-main.js.map": "/static/js/runtime-main.923183e9.js.map",
+    "static/css/2.165ff965.chunk.css": "/static/css/2.165ff965.chunk.css",
+    "static/js/2.5c353767.chunk.js": "/static/js/2.5c353767.chunk.js",
+    "static/js/2.5c353767.chunk.js.map": "/static/js/2.5c353767.chunk.js.map",
+    "static/js/3.a995b869.chunk.js": "/static/js/3.a995b869.chunk.js",
+    "static/js/3.a995b869.chunk.js.map": "/static/js/3.a995b869.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.165ff965.chunk.css.map": "/static/css/2.165ff965.chunk.css.map",
+    "static/css/main.576b7ddb.chunk.css.map": "/static/css/main.576b7ddb.chunk.css.map",
+    "static/js/2.5c353767.chunk.js.LICENSE.txt": "/static/js/2.5c353767.chunk.js.LICENSE.txt",
+    "static/media/Livros.64ab2053.mp4": "/static/media/Livros.64ab2053.mp4",
+    "static/media/hqs.4dc26163.jpg": "/static/media/hqs.4dc26163.jpg",
+    "static/media/mangas.8924b95c.jpg": "/static/media/mangas.8924b95c.jpg",
+    "static/media/slick-theme.css": "/static/media/slick.c94f7671.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.923183e9.js",
+    "static/css/2.165ff965.chunk.css",
+    "static/js/2.5c353767.chunk.js",
+    "static/css/main.576b7ddb.chunk.css",
+    "static/js/main.2003ad32.chunk.js"
+  ]
+}

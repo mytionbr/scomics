@@ -7,6 +7,7 @@ import { listProducts } from "../actions/productsActions";
 import LoadingOverlay from "../components/LoadingOverlay";
 import ProductCarousel from "../components/ProductCarousel";
 import PresentationCarousel from "../components/PresentationCarousel";
+import { Helmet } from "react-helmet";
 
 export default function HomeScreen() {
   const dispatch = useDispatch()

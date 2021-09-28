@@ -20,6 +20,7 @@ import { useEffect, useState } from "react";
 import { listProductCategories } from "./actions/productsActions";
 import SlideDrawer from "./components/SlideDrawer";
 import SearchAccordion from "./components/SearchAccordion";
+import { Helmet } from "react-helmet";
 
 function App() {
   const cart = useSelector((state)=> state.cart)
@@ -48,7 +49,9 @@ function App() {
 
   return (
     <BrowserRouter>
-   
+     <Helmet>
+          <title>Livros, HQs e mangás | scomics</title>
+      </Helmet>
     <div className="grid-container">
       <SlideDrawer show={drawerOpen} handleShow={handleDrawerToggleClick} />
       <header className="row">
@@ -66,7 +69,7 @@ function App() {
         <div className="none sm-up">
           <IconLink href="#"  iconName="fas fa-search" onClick={handleSearchToggleClick}>Buscar</IconLink>
         </div>
-        <div className="flex w-220 sm-down">
+        <div className="flex w-220 sm-down flex-end">
         <IconLink href="/cart" iconName="fas fa-shopping-cart">
           Carrinho
               {
