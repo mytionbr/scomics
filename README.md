@@ -1,6 +1,6 @@
 # SCOMICS
 
-![Demontration](https://github.com/mytionbr/images-videos/blob/master/scomics-desmostracao.mp4)
+![Demontration](https://github.com/mytionbr/images-videos/blob/master/scomics-desmostracao.gif)
 
 Scomics é uma livraria virtual desenvolvida com MERN Stack (MongoDB, ExpressJS, ReactJs e NodeJs).
 
