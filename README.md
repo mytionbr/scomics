@@ -76,6 +76,17 @@ yarn start // or npm start
 
 A aplicação está implementada no Heroku. Confira [aqui](scomics.herokuapp.com/)
 
+## Linguagens & ferramentas
+
+- [NodeJs](https://nodejs.org/en/)
+- [ReactJs](https://pt-br.reactjs.org/)
+- [ExpressJs](https://expressjs.com/pt-br/)
+- [MongoDB](https://www.mongodb.com/pt-br)
+- [ReduxJs](https://redux.js.org/)
+- [SCSS](https://sass-lang.com/guide)
+- [API do Paypal](https://developer.paypal.com/home)
+- [React-slick](https://react-slick.neostack.com/)
+
 
 
 
