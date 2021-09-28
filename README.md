@@ -63,7 +63,7 @@ $ cd scomics
 cd scomics
 yarn install // or npm install
 yarn start // or npm start
-# Para desenvolvimento: yarn mongoose // or  npm mongoose
+# Para desenvolvimento: yarn mongoose // or  npm run mongoose
 ```
 
 ### 5. Run Client
