@@ -1,9 +1,11 @@
 <p align="center">
-  <img src="https://github.com/mytionbr/images-videos/blob/master/S.png" alt="scomics logo" />
+  <img style="width: 200px" src="https://github.com/mytionbr/images-videos/blob/master/S.png" alt="scomics logo" />
 </p>
 
-# SCOMICS
+
 <div align="center">
+  
+  # SCOMICS
   
   ![Demontration](https://github.com/mytionbr/images-videos/blob/master/scomics-desmostracao.gif)
   
