@@ -1,8 +1,15 @@
+<p align="center">
+  <img src="https://github.com/mytionbr/images-videos/blob/master/S.png" alt="scomics logo" />
+</p>
+
 # SCOMICS
+<div align="center">
+  
+  ![Demontration](https://github.com/mytionbr/images-videos/blob/master/scomics-desmostracao.gif)
+  
+  Scomics é uma livraria virtual desenvolvida com MERN Stack (MongoDB, ExpressJS, ReactJs e NodeJs).
+</div>
 
-![Demontration](https://github.com/mytionbr/images-videos/blob/master/scomics-desmostracao.gif)
-
-Scomics é uma livraria virtual desenvolvida com MERN Stack (MongoDB, ExpressJS, ReactJs e NodeJs).
 
 ## Fluxos
 
@@ -73,6 +80,28 @@ yarn start // or npm start
 - Acesse as urls [http://localhost:5000/api/products/seed](http://localhost:5000/api/products/seed) e [http://localhost:5000/api/users/seed](http://localhost:5000/api/users/seed)
 - Isso irá adicionar 15 produtos e 2 usuários (Um cliente e um adm) no BD
 
+## Screenshots
+
+Home screen
+![home screen](https://github.com/mytionbr/images-videos/blob/master/home-page.PNG)
+
+Carrousel
+![carrousel](https://github.com/mytionbr/images-videos/blob/master/carrousel.PNG)
+
+Product screen
+![product screen](https://github.com/mytionbr/images-videos/blob/master/product-screen.PNG)
+
+Cart screen
+![cart-screen](https://github.com/mytionbr/images-videos/blob/master/cart-screen.PNG)
+
+Order screen
+![order-screen](https://github.com/mytionbr/images-videos/blob/master/order-screen.PNG)
+
+Search screen
+![search-screen](https://github.com/mytionbr/images-videos/blob/master/search-screen.PNG)
+
+Sidebar
+![side-bar](https://github.com/mytionbr/images-videos/blob/master/side-bar.PNG)
 
 ## Demo
 
@@ -88,6 +117,16 @@ A aplicação está implementada no Heroku. Confira [aqui](scomics.herokuapp.com
 - [SCSS](https://sass-lang.com/guide)
 - [API do Paypal](https://developer.paypal.com/home)
 - [React-slick](https://react-slick.neostack.com/)
+
+# Desenvolvedor
+
+<table>
+  <tr>
+    <td align='center'>
+      <a href='https://github.com/mytionbr'><img style="width: 100px" src='https://avatars.githubusercontent.com/u/43896079?v=4' /><br />Matheus Sousa de Jesus</a>
+    </td>
+  </tr>
+</table>
 
 
 
