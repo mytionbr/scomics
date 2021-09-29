@@ -63,7 +63,7 @@ $ cd scomics
 cd scomics
 yarn install // or npm install
 yarn start // or npm start
-# Para desenvolvimento: yarn mongoose // or  npm run mongoose
+# Para desenvolvimento: yarn nodemon // or  npm run nodemon
 ```
 
 ### 5. Run Client
@@ -72,7 +72,6 @@ cd scomics
 cd client
 yarn install // or npm install
 yarn start // or npm start
-# Para desenvolvimento: yarn mongoose // or npm mongoose
 ```
 
 ### 6. Popule o banco de dados 
